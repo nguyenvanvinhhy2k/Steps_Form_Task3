@@ -200,7 +200,7 @@
 </template>
 
 <script>
-import { required } from "vuelidate/lib/validators";
+import { sameAs } from "vuelidate/lib/validators";
 
 export default {
   name: "FirstStep",
@@ -221,9 +221,10 @@ export default {
       
     };
   },
-  validations: {
-    checkbox: { required },
-    
+ validations: {
+    checkbox: {
+      sameAs: sameAs(() => true),
+    },
   },
   methods: {
     submit() {
