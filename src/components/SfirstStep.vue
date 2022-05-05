@@ -206,7 +206,7 @@ export default {
   name: "FirstStep",
   data() {
     return {
-      checkbox: null,
+      checkbox: false,
       location: [
         {
           label: "事業所名",
